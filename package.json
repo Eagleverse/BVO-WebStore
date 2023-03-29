@@ -1,5 +1,5 @@
 {
-  "name": "bvo-estore",
+  "name": "package",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -38,5 +38,9 @@
   },
   "devDependencies": {
     "react-router-dom": "^6.9.0"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "James",
+  "license": "ISC"
 }

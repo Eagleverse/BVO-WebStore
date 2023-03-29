@@ -1,5 +1,5 @@
 
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "mod-onboard/react-router-dom";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";

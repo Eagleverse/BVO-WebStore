@@ -7,17 +7,24 @@ import NoPage from "./Pages/NoPage";
 
 export default function App() {
     return (
-        <div>
-            <h1>Hedge</h1>
-            <BWR/>
-            <Footer/>
-        </div>
+        <>
+            <div className={"Header"}>
+                <Header/>
+            </div>
+            <div className={"Menu"}>
+                <BWR/>
+            </div>
+            <div className={"Footer"}>
+                <Footer/>
+            </div>
+        </>
+
     );
 }
 
 function BWR(){
     return (
-        <BrowserRouter>
+        <BrowserRouter className={"Menu"}>
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
@@ -29,10 +36,17 @@ function BWR(){
         </BrowserRouter>
     );
 }
+function Header(){
+    return(
+        <header>
+            <h1>Welcome to my Web Store</h1>
+        </header>
+    );
+}
 function Footer(){
     return(
         <footer>
-            <h1>My Webstore</h1>
+            <h1>My Web Store</h1>
         </footer>
     );
 }

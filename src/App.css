@@ -1,32 +1,70 @@
+/*noinspection CssUnusedSymbol*/
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
+/*noinspection CssUnusedSymbol*/
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.Header{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+.Footer{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Page-Head-Foot{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+body{
+  background-color: #282c34;
+}
+
+.Main{
+  background-color: #003296;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.Menu{
+  display: flex;
+  flex-direction: column;
+  background-color:#61dafb;
 }
 
 .App-link {
+  padding: 32px;
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {

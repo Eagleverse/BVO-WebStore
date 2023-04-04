@@ -1,9 +1,11 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Layout from "./Pages/Layout";
 import Home from "./Pages/Home";
-import Login from "./Pages/Login";
+import CreateAccount from "./Pages/CreateAccount";
 import Template from "./Pages/Template";
 import NoPage from "./Pages/NoPage";
+import Week3 from "./Pages/Week3";
+import LGM from "./Pages/LoginManager";
 
 export default function App() {
     return (
@@ -28,9 +30,13 @@ function BWR(){
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="Login" element={<Login />} />
+                    <Route path="CreateAccount" element={<CreateAccount />} />
+                    <Route path="LoginManager" element={<LGM />} />
+
                     <Route path="template" element={<Template />} />
                     <Route path="*" element={<NoPage />} />
+                    <Route path="Week3" element={<Week3/>}/>
+
                 </Route>
             </Routes>
         </BrowserRouter>

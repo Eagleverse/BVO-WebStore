@@ -18,10 +18,6 @@ export default function CreateAccount() {
                     <h1>Alright you are:</h1>
                     <NewAcc/>
                 </>
-                <h3>3</h3>
-                <>
-                    <p>Section Content</p>
-                </>
             </div>
         </>
     );

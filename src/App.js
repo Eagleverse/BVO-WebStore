@@ -4,8 +4,11 @@ import Home from "./Pages/Home";
 import CreateAccount from "./Pages/CreateAccount";
 import Template from "./Pages/Template";
 import NoPage from "./Pages/NoPage";
-import Week3 from "./Pages/Week3";
+import Mailing from "./Pages/Mailing";
 import LGM from "./Pages/LoginManager";
+import ToDo from "./Pages/todo";
+
+
 
 export default function App() {
     return (
@@ -32,10 +35,10 @@ function BWR(){
                     <Route index element={<Home />} />
                     <Route path="CreateAccount" element={<CreateAccount />} />
                     <Route path="LoginManager" element={<LGM />} />
-
                     <Route path="template" element={<Template />} />
+                    <Route path="todo" element={<ToDo />} />
                     <Route path="*" element={<NoPage />} />
-                    <Route path="Week3" element={<Week3/>}/>
+                    <Route path="Mailing" element={<Mailing/>}/>
 
                 </Route>
             </Routes>

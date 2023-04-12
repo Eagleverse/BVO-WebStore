@@ -15,7 +15,10 @@ const Layout = () => {
                         <Link to="/Template">Template</Link>
                     </li>
                     <li>
-                        <Link to="/Week3">Week 3 Placeholder (App v1.1.3)</Link>
+                        <Link to="/Mailing">Mailing List JoinIn (App v1.1.3)</Link>
+                    </li>
+                    <li>
+                        <Link to="/todo">Project To-Do</Link>
                     </li>
                 </ul>
             </nav>

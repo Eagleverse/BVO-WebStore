@@ -1,8 +1,7 @@
 import '../App.css';
 import contact from '../graphic/stock/contact.png';
-import React from 'react'
-
-
+import React from 'react';
+import {Terms} from "../data/info/tos"
 const Mailing = () => {
     return <XFrameMain/>;
 };
@@ -37,6 +36,10 @@ let XFrameMain = () => {
                     </>
                     <h5>What you can send to us</h5>
                     <>
+                    </>
+                    <h5>TOS things</h5>
+                    <>
+                        <List/>
                     </>
                 </>
             </div>
@@ -73,13 +76,26 @@ class SubFormHandler extends React.Component {
 }
 
 class SubForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            Name: "",
+            Email: '',
+            OptIn1: '',
+            OptIn2: '',
+            OptIn3: "",
+
+        }
+    }
 
     onSubmit = (event) => {
         this.props.parentCallback(event.target.email.value);
 
         event.preventDefault();
     }
-
+    setO1 = (e) => {
+       this.setState({OptIn1:e.target.value})
+    }
     render() {
         return (
             <div>
@@ -91,7 +107,14 @@ class SubForm extends React.Component {
                         prompt="Enter Email"
                         label="Example@webMail.com"
                     />
-                    <br></br><br></br>
+                    <br></br>
+                    <DynInput
+                        type={"checkbox"}
+                        promptInline={"promotional"}
+                        label={"Hey"}
+                        val={this.state.OptIn1}
+                        onClick={this.setO1}
+                    />
                     <DynInput type="submit" val="Submit and Subscribe"/>
                     <br></br><br></br>
                 </form>
@@ -100,11 +123,41 @@ class SubForm extends React.Component {
     }
 }
 
+
+class HelloFormHandler extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            User:"Jim",
+            uName:"John Doe"
+        }
+    }
+
+    handleCallback = (childData) => {
+        this.setState({uName: childData})
+
+    }
+
+    render() {
+
+        return (
+            <>
+                <HelloForm
+                    User={this.state.User}
+                    parentCallback = {this.handleCallback}
+                />
+                <p>{this.state.uName}</p>
+            </>
+        )
+    }
+}
+
 class HelloForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Name: "",
+            User:this.props.User,
+            Name: this.props.Name,
             Name2: '',
             Email: '',
             Message: '',
@@ -125,16 +178,16 @@ class HelloForm extends React.Component {
         this.setState({Message: e.target.value});
     }
     onSubmit = (e) => {
-        alert(this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email);
+        alert(this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email+"\n"+this.state.User);
+        this.props.parentCallback(this.state.Name)
         e.preventDefault();
     }
-
-
+    
     render() {
-
         return (
             <form>
                 <p>
+                    {this.state.Name}
                 </p>
                 <DynInput
                     type={"Text"}
@@ -177,14 +230,6 @@ class HelloForm extends React.Component {
 
 }
 
-function HelloFormHandler() {
-
-    return (
-        <>
-            <HelloForm/>
-        </>
-    )
-}
 
 function DynInput(props) {
     return (
@@ -197,8 +242,27 @@ function DynInput(props) {
                 placeholder={props.label}
                 onChange={props.onChange}
             />
+            <label>
+                {props.promptInline}
+            </label>
         </label>
     )
 }
+
+function List() {
+    const tosItems = Terms.map(tos =>
+        <li key={tos.id}>
+
+            <p>
+                <b>{tos.item}</b>
+            </p>
+            <sub>
+                <p>{tos.info}</p>
+            </sub>
+        </li>
+    );
+    return <ul>{tosItems}</ul>;
+}
+
 
 export default Mailing;

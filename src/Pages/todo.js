@@ -35,14 +35,14 @@ let XFrameMain=()=>{
                 <>
                     <ul>
                         <s><li>At least one image, video or multimedia component</li></s>
-                        <li>At least one <s>Event Handling</s>, Lists And keys</li>
+                        <s><li>At least one <s>Event Handling</s>, Lists And keys</li></s>
                         <ul><li>What am I subscribing to?</li></ul>
                         <s><li>Passing property from a parent component to a child component</li></s>
                         <s><li>Passing property from a child component to parent component (use a callback and states)</li></s>
                         <s><li>Passing property from a child to child (Between Siblings) component</li></s>
-                        <li>Passing state from parent to child</li>
-                        <li>Passing state from child to parent</li>
-                        <li>Read component data from a local JSON file or API</li>
+                        <s><li>Passing state from parent to child</li></s>
+                        <s><li>Passing state from child to parent</li></s>
+                        <s><li>Read component data from a local JSON file or API</li></s>
                     </ul>
                 </>
                 <h3>4</h3>

@@ -7,7 +7,8 @@ import NoPage from "./Pages/NoPage";
 import Mailing from "./Pages/Mailing";
 import LGM from "./Pages/LoginManager";
 import ToDo from "./Pages/todo";
-
+import data from './data/info/info.json';
+import React from "react";
 
 
 export default function App() {
@@ -56,6 +57,18 @@ function Footer(){
     return(
         <footer>
             <h1>My Web Store</h1>
+            <p>
+                <FooterInfo/>
+            </p>
         </footer>
     );
+}
+
+function FooterInfo(){
+    return <ul>
+        <li>{data.name}</li>
+        <li>{data.creation}</li>
+        <li>{data.location}</li>
+        <li>{data.made}</li>
+    </ul>;
 }

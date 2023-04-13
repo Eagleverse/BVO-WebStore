@@ -30,18 +30,10 @@ let XFrameMain = () => {
                     </p>
                 </>
                 <h3>About</h3>
-                <>
-                    <h5>What we send to you</h5>
-                    <>
-                    </>
-                    <h5>What you can send to us</h5>
-                    <>
-                    </>
-                    <h5>TOS things</h5>
                     <>
                         <List/>
                     </>
-                </>
+
             </div>
         </>
     )
@@ -69,7 +61,7 @@ class SubFormHandler extends React.Component {
         return (
             <div>
                 <SubForm parentCallback={this.handleCallback}/>
-                {email}
+                Hello, {email}
             </div>
         )
     }
@@ -146,7 +138,7 @@ class HelloFormHandler extends React.Component {
                     User={this.state.User}
                     parentCallback = {this.handleCallback}
                 />
-                <p>{this.state.uName}</p>
+                <p>Welcome, {this.state.uName}</p>
             </>
         )
     }
@@ -178,7 +170,7 @@ class HelloForm extends React.Component {
         this.setState({Message: e.target.value});
     }
     onSubmit = (e) => {
-        alert(this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email+"\n"+this.state.User);
+        alert("Form info:\n"+this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email+"\n"+this.state.User);
         this.props.parentCallback(this.state.Name)
         e.preventDefault();
     }
@@ -186,9 +178,6 @@ class HelloForm extends React.Component {
     render() {
         return (
             <form>
-                <p>
-                    {this.state.Name}
-                </p>
                 <DynInput
                     type={"Text"}
                     name={"Name"}

@@ -2,6 +2,7 @@ import '../App.css';
 import contact from '../graphic/stock/contact.png';
 import React from 'react';
 import {Terms} from "../data/info/tos"
+
 const Mailing = () => {
     return <XFrameMain/>;
 };
@@ -30,9 +31,9 @@ let XFrameMain = () => {
                     </p>
                 </>
                 <h3>About</h3>
-                    <>
-                        <List/>
-                    </>
+                <>
+                    <List/>
+                </>
 
             </div>
         </>
@@ -86,8 +87,9 @@ class SubForm extends React.Component {
         event.preventDefault();
     }
     setO1 = (e) => {
-       this.setState({OptIn1:e.target.value})
+        this.setState({OptIn1: e.target.value})
     }
+
     render() {
         return (
             <div>
@@ -120,8 +122,8 @@ class HelloFormHandler extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            User:"Jim",
-            uName:"John Doe"
+            User: "Jim",
+            uName: "John Doe"
         }
     }
 
@@ -136,7 +138,7 @@ class HelloFormHandler extends React.Component {
             <>
                 <HelloForm
                     User={this.state.User}
-                    parentCallback = {this.handleCallback}
+                    parentCallback={this.handleCallback}
                 />
                 <p>Welcome, {this.state.uName}</p>
             </>
@@ -148,7 +150,7 @@ class HelloForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            User:this.props.User,
+            User: this.props.User,
             Name: this.props.Name,
             Name2: '',
             Email: '',
@@ -170,11 +172,11 @@ class HelloForm extends React.Component {
         this.setState({Message: e.target.value});
     }
     onSubmit = (e) => {
-        alert("Form info:\n"+this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email+"\n"+this.state.User);
+        alert("Form info:\n" + this.state.Message + "\n" + this.state.Name + "\n" + this.state.Email + "\n" + this.state.User);
         this.props.parentCallback(this.state.Name)
         e.preventDefault();
     }
-    
+
     render() {
         return (
             <form>

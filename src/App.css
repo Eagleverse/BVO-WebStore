@@ -1,83 +1,82 @@
 /*noinspection CssUnusedSymbol*/
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
 }
 
 /*noinspection CssUnusedSymbol*/
-.App-header {
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.Header {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.Header{
-  background-color: #282c34;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-.Footer{
-  background-color: #282c34;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Footer {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
-.Page-Head-Foot{
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  background-color: aliceblue;
+.Page-Head-Foot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: aliceblue;
 }
 
-body{
-  background-color: #282c34;
+body {
+    background-color: #282c34;
 }
 
-img{
-  height: 256px;
+img {
+    height: 256px;
 }
 
-.Main{
-  background-color: #003296;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 32px;
-  color: darkgrey;
+.Main {
+    background-color: #003296;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 32px;
+    color: darkgrey;
 }
 
-.Menu{
-  display: flex;
-  flex-direction: column;
-  background-color:#61dafb;
+.Menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #61dafb;
 }
 
 .App-link {
-  padding: 32px;
-  color: #61dafb;
+    padding: 32px;
+    color: #61dafb;
 }
 
+summary {
+    background-color: aquamarine;
+    outline: darkgrey;
+    color: #282c34;
+    padding: 5px;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }

@@ -1,8 +1,9 @@
 import React from 'react';
-let cUser="tempU";
-let cPass="tempP";
+
+let cUser = "tempU";
+let cPass = "tempP";
 export default function CreateAccount() {
-    return(
+    return (
         <>
             <div className={"Page-Head-Foot"}>
                 <h1>Shiny New Account</h1>
@@ -11,7 +12,7 @@ export default function CreateAccount() {
                 <link rel="stylesheet" href="../App.css"/>
                 <h3>1</h3>
                 <>
-                    <NewAccForm />
+                    <NewAccForm/>
                 </>
                 <h3>2</h3>
                 <>
@@ -23,20 +24,21 @@ export default function CreateAccount() {
     );
 };
 
-class NewAcc extends React.Component{
-    render(){
-        return(
+class NewAcc extends React.Component {
+    render() {
+        return (
             <>
                 <UserProfile/>
             </>
         );
     }
 }
+
 function User(props) {
-    return(
+    return (
         <>
-            <h2>UserInfo: { props.uName }, {props.pWord}</h2>
-            <h2>WhoIs: { props.fName }, {props.lName}</h2>
+            <h2>UserInfo: {props.uName}, {props.pWord}</h2>
+            <h2>WhoIs: {props.fName}, {props.lName}</h2>
         </>
     );
 }
@@ -50,28 +52,29 @@ function UserProfile() {
 }
 
 
+class NewAccForm extends React.Component {
+    render() {
 
-function NewAccForm() {
-
-    return (
-        <form>
-            <label>Enter a Username:
-                <input
-                    type="text"
-                    name="username"
-                    value="UserName"
-                />
-            </label>
-            <p></p>
-            <label>Enter a strong password:
-                <input
-                    type="text"
-                    name="pword"
-                    value="123!@#ABC"
-                />
-            </label>
-            <p></p>
-            <input type="submit"/>
-        </form>
-    )
+        return (
+            <form>
+                <label>Enter a Username:
+                    <input
+                        type="text"
+                        name="username"
+                        value="UserName"
+                    />
+                </label>
+                <p></p>
+                <label>Enter a strong password:
+                    <input
+                        type="text"
+                        name="pword"
+                        value="123!@#ABC"
+                    />
+                </label>
+                <p></p>
+                <input type="submit"/>
+            </form>
+        )
+    }
 }

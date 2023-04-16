@@ -1,11 +1,13 @@
+// noinspection JSUnusedGlobalSymbols
+
 import '../App.css';
 
 const Template = () => {
     return <XFrameMain/>;
 };
 
-let XFrameMain=()=>{
-    return(
+let XFrameMain = () => {
+    return (
         <>
             <div className={"Page-Head-Foot"}>
                 <h1>Page Title</h1>

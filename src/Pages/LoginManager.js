@@ -1,11 +1,12 @@
 import '../App.css';
 import './CreateAccount';
+
 const LGM = () => {
     return <XFrameMain/>;
 };
 
-let XFrameMain=()=>{
-    return(
+let XFrameMain = () => {
+    return (
         <>
             <div className={"Page-Head-Foot"}>
                 <h1>Log-In Manager</h1>

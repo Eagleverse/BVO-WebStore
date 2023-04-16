@@ -1,7 +1,7 @@
 import '../App.css';
 
 const Home = () => {
-    return(
+    return (
         <>
             <div className={"Page-Head-Foot"}>
                 <h1>Welcome!</h1>

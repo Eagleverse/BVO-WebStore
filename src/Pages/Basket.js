@@ -1,6 +1,6 @@
 import '../App.css';
 import React from "react";
-import {item} from "../data/shopping/bought.js"
+import {item} from "../data/shopping/basket.js"
 
 const Basket = () => {
     return <XFrameMain/>;
@@ -68,7 +68,7 @@ class Baskets extends React.Component {
 
 class RenderBasket extends React.Component {
     renderBasketItems = null;
-    currentPhase = "Normal"
+    currentPhase = "Early Render"
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         this.currentPhase = "Updated"
@@ -79,6 +79,11 @@ class RenderBasket extends React.Component {
     }
 
     componentDidMount() {
+        this.currentPhase = "Normal";
+
+    }
+
+    render() {
         this.renderBasketItems = item.map(bask =>
             <li key={bask.id}>
 
@@ -91,11 +96,7 @@ class RenderBasket extends React.Component {
                 <sub>
                     <p>${bask.price}</p>
                 </sub>
-            </li>
-        );
-    }
-
-    render() {
+            </li>)
 
         return (
             <>

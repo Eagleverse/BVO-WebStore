@@ -8,6 +8,7 @@ import NoPage from "./Pages/NoPage";
 import Mailing from "./Pages/Mailing";
 import LGM from "./Pages/LoginManager";
 import ToDo from "./Pages/todo";
+import Product from "./Pages/ProductPage";
 import data from './data/info/info.json';
 import React from "react";
 
@@ -42,8 +43,7 @@ function BWR() {
                     <Route path="*" element={<NoPage/>}/>
                     <Route path="Mailing" element={<Mailing/>}/>
                     <Route path="Basket" element={<Basket/>}/>
-
-
+                    <Route path="ProductPage" element={<Product/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

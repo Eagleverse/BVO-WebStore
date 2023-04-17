@@ -23,6 +23,9 @@ const Layout = () => {
                     <li>
                         <Link to="/todo">Project To-Do</Link>
                     </li>
+                    <li>
+                        <Link to="/ProductPage">Product Page</Link>
+                    </li>
                 </ul>
             </nav>
 

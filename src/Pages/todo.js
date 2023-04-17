@@ -12,8 +12,10 @@ let XFrameMain = () => {
             </div>
             <div className={"Main"}>
                 <link rel="stylesheet" href="../App.css"/>
-                <h3>Completed:</h3>
                 <details>
+                    <summary>
+                        Completed
+                    </summary>
                     <h3>2</h3>
                     <>
                         <p>
@@ -68,35 +70,63 @@ let XFrameMain = () => {
                             </s>
                         </ul>
                     </>
+                    <h3>4</h3>
+                    <>
+                        <ul>
+                            <s>
+                                <li>At least one Event Handling (like OnClick, onChange or onSubmit) , Lists And keys
+                                </li>
+                            </s>
+                            <s>
+                                <li>Passing property between components</li>
+                            </s>
+                            <s>
+                                <li>At least one component that behaves as follows:-
+                                    <ul>
+                                        <li>Perform some action when component is getting ready to be mounted (or just
+                                            after
+                                            it
+                                            mounts). By defining the function componentWillMount() (or
+                                            componentDidMount())
+                                        </li>
+                                        <li>Perform some action when component state or props changes. By defining the
+                                            function
+                                            componentWillUpdate() or componentWillReceiveProps()
+                                        </li>
+                                        <li>Before the component is unmounted handle any clean-up events, such as
+                                            clearing
+                                            timeouts, clearing data, disconnecting websockets, etc. with
+                                            componentWillUnmount()
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </s>
+                        </ul>
+                    </>
                 </details>
                 <h2>Remaining:</h2>
-                <h3>4</h3>
+
+                <h3>5</h3>
                 <>
                     <ul>
                         <s>
-                            <li>At least one Event Handling (like OnClick, onChange or onSubmit) , Lists And keys</li>
-                        </s>
-                        <s>
-                            <li>Passing property between components</li>
-                        </s>
-                        <s>
-                            <li>At least one component that behaves as follows:-
-                                <ul>
-                                    <li>Perform some action when component is getting ready to be mounted (or just after
-                                        it
-                                        mounts). By defining the function componentWillMount() (or componentDidMount())
-                                    </li>
-                                    <li>Perform some action when component state or props changes. By defining the
-                                        function
-                                        componentWillUpdate() or componentWillReceiveProps()
-                                    </li>
-                                    <li>Before the component is unmounted handle any clean-up events, such as clearing
-                                        timeouts, clearing data, disconnecting websockets, etc. with
-                                        componentWillUnmount()
-                                    </li>
-                                </ul>
+                            <li>At least one of each Basic Hooks
+                                <ol>
+                                    <li>useState, https://react.dev/reference/react/useState</li>
+                                    <li>useEffect, https://react.dev/reference/react/useEffect</li>
+                                    <li>useContext, https://react.dev/reference/react/useContext</li>
+                                </ol>
                             </li>
-
+                        </s>
+                        <s>
+                            <li>Implement at least one React route to handle navigation between pages</li>
+                        </s>
+                        <s>
+                            <li> Implement at least one Redux provider to create a Redux store</li>
+                        </s>
+                        <s>
+                            <li>Implement at least one Redux connect function to read values from the Redux store</li>
                         </s>
                     </ul>
                     <ol>
@@ -110,9 +140,11 @@ let XFrameMain = () => {
                         </li>
                     </ol>
                 </>
-                <h3>5</h3>
+                <h3>6</h3>
                 <>
-                    <p>Section Content</p>
+                </>
+                <h3>7&8</h3>
+                <>
                 </>
             </div>
         </>

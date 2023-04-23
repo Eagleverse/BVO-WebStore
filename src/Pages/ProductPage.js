@@ -67,16 +67,16 @@ function ProductRedux() {
 
 function ConfigProduct(props) {
     const [product, setProduct] = useState("");
-    useEffect(()=> setProduct(item[props.serial].name), [props.serial]
+    useEffect(() => setProduct(item[props.serial].name), [props.serial]
     )
     return (
         <>
             <>
-                    <p>Name: {product}</p>
-                    <p>Select Quantity:{"\n"}
-                        <ProductRedux></ProductRedux>
-                        <p>Only available in coconut brown.</p>
-                    </p>
+                <p>Name: {product}</p>
+                <p>Select Quantity:{"\n"}
+                    <ProductRedux></ProductRedux>
+                    <p>Only available in coconut brown.</p>
+                </p>
             </>
             <>
                 <h3>Information</h3>
@@ -90,13 +90,14 @@ function ConfigProduct(props) {
 }
 
 const ProductContext = createContext();
+
 function ProductPrice() {
     const [product] = useState(item);
 
     return (
         <ProductContext.Provider value={product}>
             <p>{`This product costs ${product[0].price}`}</p>
-            <ProductID />
+            <ProductID/>
         </ProductContext.Provider>
     );
 }
@@ -106,8 +107,9 @@ function ProductID() {
 
     return (
         <>
-            <p>{"ID: "+itemInfo[0].id} </p>
+            <p>{"ID: " + itemInfo[0].id} </p>
         </>
     );
 }
+
 export default Product;

@@ -1,5 +1,4 @@
 import '../App.css';
-
 const Template = () => {
     return <XFrameMain/>;
 };

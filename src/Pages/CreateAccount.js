@@ -1,5 +1,4 @@
 import React from 'react';
-
 let cUser = "tempU";
 let cPass = "tempP";
 export default function CreateAccount() {
@@ -68,7 +67,7 @@ class NewAccForm extends React.Component {
                 <label>Enter a strong password:
                     <input
                         type="text"
-                        name="pword"
+                        name="current pword"
                         value="123!@#ABC"
                     />
                 </label>

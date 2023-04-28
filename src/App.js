@@ -6,16 +6,14 @@ import Basket from "./Pages/Basket";
 import Template from "./Pages/Template";
 import NoPage from "./Pages/NoPage";
 import Mailing from "./Pages/Mailing";
-import LGM from "./Pages/LoginManager";
+import Login from "./Pages/LoginManager";
 import ToDo from "./Pages/todo";
 import Product from "./Pages/ProductPage";
 import data from './data/info/info.json';
 import React from "react";
-
-
 export default function App() {
     return (
-        <>
+        <div>
             <div className={"Header"}>
                 <Header/>
             </div>
@@ -25,7 +23,7 @@ export default function App() {
             <div className={"Footer"}>
                 <Footer/>
             </div>
-        </>
+        </div>
 
     );
 }
@@ -37,7 +35,7 @@ function BWR() {
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Home/>}/>
                     <Route path="CreateAccount" element={<CreateAccount/>}/>
-                    <Route path="LoginManager" element={<LGM/>}/>
+                    <Route path="LoginManager" element={<Login/>}/>
                     <Route path="template" element={<Template/>}/>
                     <Route path="todo" element={<ToDo/>}/>
                     <Route path="*" element={<NoPage/>}/>

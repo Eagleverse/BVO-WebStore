@@ -1,7 +1,8 @@
 import '../App.css';
 import './CreateAccount';
+import Mogus from "../util/mdb";
 
-const LGM = () => {
+const Login = () => {
     return <XFrameMain/>;
 };
 
@@ -16,7 +17,7 @@ let XFrameMain = () => {
                 <h3>1</h3>
                 <>
                     <p>Section Content</p>
-                    <use/>
+                    <Mogus></Mogus>
                 </>
                 <h3>2</h3>
                 <>
@@ -31,4 +32,4 @@ let XFrameMain = () => {
     )
 }
 
-export default LGM;
+export default Login;
